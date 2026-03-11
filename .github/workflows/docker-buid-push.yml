@@ -25,4 +25,4 @@ jobs:
           push: true
           tags: |
             ${{vars.DOCKER_USERNAME}}/flask-app-ecs:latest
-            ${{vars.DOCKER_USERNAME}}/flask-app-ecs:${{ github.sha }} #Provides Commit ID as Tag
+            ${{vars.DOCKER_USERNAME}}/flask-app-ecs:${{ github.sha }} 
