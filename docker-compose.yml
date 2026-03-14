@@ -1,7 +1,7 @@
 services:
   
   web:
-    image: ${ DOCKERHUB_USER }/flask-app-ecs
+    image: ${DOCKERHUB_USER}/flask-app-ecs
     ports:
       - "80:80"
     
