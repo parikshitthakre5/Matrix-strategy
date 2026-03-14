@@ -3,64 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOps Zero To Hero</title>
+<title>DevOps CI/CD Demo</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+background:linear-gradient(135deg,#1f1c2c,#302b63,#1f4068);
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-color:#e0e0e0;
+color:#e5e7eb;
 }
 
-.container{text-align:center;padding:2rem;max-width:640px}
+.wrapper{text-align:center;padding:2rem;max-width:650px}
 
 h1{
-font-size:2.5rem;
+font-size:2.4rem;
 margin-bottom:.5rem;
-background:linear-gradient(90deg,#00d2ff,#7b2ff7);
+background:linear-gradient(90deg,#22d3ee,#a78bfa);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.badge{
+.tag{
 display:inline-block;
 margin:1rem 0;
 padding:.4rem 1.2rem;
-border:1px solid #7b2ff7;
+border:1px solid #8b5cf6;
 border-radius:999px;
 font-size:.9rem;
-color:#c4b5fd;
+color:#ddd6fe;
 letter-spacing:.05em;
 }
 
-.status{
+.pipeline{
 margin:1rem 0 2rem;
 font-size:.9rem;
 color:#9ca3af;
 }
 
-.cards{
+.grid{
 display:flex;
 gap:1rem;
 justify-content:center;
 flex-wrap:wrap;
 }
 
-.card{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.1);
+.box{
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.12);
 border-radius:12px;
 padding:1.5rem 1.8rem;
 min-width:150px;
 flex:1;
+box-shadow:0 4px 12px rgba(0,0,0,.25);
 }
 
-.card span{
+.box span{
 display:block;
 font-size:.75rem;
 text-transform:uppercase;
@@ -69,7 +71,7 @@ color:#9ca3af;
 margin-bottom:.4rem;
 }
 
-.card strong{
+.box strong{
 font-size:1.25rem;
 color:#f9fafb;
 }
@@ -77,32 +79,37 @@ color:#f9fafb;
 </head>
 
 <body>
-<div class="container">
 
-<h1>DevOps Zero To Hero</h1>
-<div class="badge">Josh Batch 10</div>
+<div class="wrapper">
 
-<div class="status">
-✔ Lint Checked &nbsp; | &nbsp; ✔ Tests Passed &nbsp; | &nbsp; 🚀 Deployed via GitHub Actions
+<h1>DevOps CI/CD Demo</h1>
+
+<div class="tag">Automation Batch</div>
+
+<div class="pipeline">
+✔ Code Linted &nbsp; | &nbsp; ✔ Tests Successful &nbsp; | &nbsp; 🚀 Auto Deploy with GitHub Actions
 </div>
 
-<div class="cards">
-<div class="card">
-<span>Framework</span>
-<strong>Flask 3.1</strong>
+<div class="grid">
+
+<div class="box">
+<span>Backend</span>
+<strong>Flask</strong>
 </div>
 
-<div class="card">
-<span>Runtime</span>
+<div class="box">
+<span>Environment</span>
 <strong>Python 3.14</strong>
 </div>
 
-<div class="card">
-<span>Deploy</span>
+<div class="box">
+<span>Infrastructure</span>
 <strong>AWS ECS</strong>
-</div>
 </div>
 
 </div>
+
+</div>
+
 </body>
 </html>
