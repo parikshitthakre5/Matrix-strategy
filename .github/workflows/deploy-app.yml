@@ -1,0 +1,21 @@
+name: Deploy Flask App to AWS ECS
+
+on: 
+  workflow_dispatch:
+    
+
+jobs:
+  deploy:
+    env:
+        DOCKERHUB_USER: ${{ vars.DOCKER_USERNAME }}
+          
+    runs-on: self-hosted
+
+    steps:
+    
+      - name: Code Checkout
+        uses: actions/checkout@v4 
+
+      - name: Deploy with Docker Compose
+        run: |
+          docker-compose up -d --build
